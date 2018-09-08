@@ -1,0 +1,32 @@
+*{
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+.contenedor {
+display: grid; /*siempre*/
+grid-template-columns: repeat(4, 100px);
+grid-template-rows: repeat(3, 100px);
+grid-template-areas: 
+"a a b b"
+"c d d d"
+"e e e e";
+grid-column-gap: 10px;
+grid-row-gap: 15px;
+
+}
+
+.item-1 {grid-area: a;}  /* siempre tienen que ser diferentes*/
+.item-2 {grid-area: b;}
+.item-3 {grid-area: c;}
+.item-4 {grid-area: d;}
+.item-5 {grid-area: e;}
+
+
+div[class^="item"] {
+	background: red;
+	padding: 5px;
+
+}
